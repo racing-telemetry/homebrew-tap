@@ -3,5 +3,5 @@
 Homebrew Formulae to Racing Telemetery binaries
 
 ```sh
-brew install racing-telemetry/tap/f1dump
+brew install racing-telemetry/tap/f1-cli
 ```
