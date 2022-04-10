@@ -5,21 +5,21 @@
 class F1Cli < Formula
   desc "UDP Data Dumper for Formula 1 game"
   homepage "https://github.com/racing-telemetry"
-  version "0.0.1-rc.5"
+  version "0.0.1"
   license "Apache"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.5/f1-cli_Darwin_x86_64.tar.gz"
-      sha256 "5ac9e6a2f0f03e4092b83074afc40d44a577771e2e9985ef5aff48f4ad2b41e2"
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1/f1-cli_Darwin_x86_64.tar.gz"
+      sha256 "76e2fe2156c98f5e816d791e237980a542e9524c92ad956cf5cd9778e827fcbc"
 
       def install
         bin.install "f1"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.5/f1-cli_Darwin_arm64.tar.gz"
-      sha256 "33dbca16f1b2bcbe5f2fcc79fd2b48a3e5acdb49fce94390e80621552f97be94"
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1/f1-cli_Darwin_arm64.tar.gz"
+      sha256 "929806bdb600899259183585232358b6d8a9a9a37e7e1aff33159ae41996f191"
 
       def install
         bin.install "f1"
@@ -29,24 +29,24 @@ class F1Cli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.5/f1-cli_Linux_armv7.tar.gz"
-      sha256 "42a039a618f53018470a64012f3e958dc9659f4a9449a7bb743966b5913e4e4e"
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1/f1-cli_Linux_armv7.tar.gz"
+      sha256 "45e79a36416f6c5ba875044fcf708467b8b2dd2676677957ec276ee6ff57a72f"
 
       def install
         bin.install "f1"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.5/f1-cli_Linux_x86_64.tar.gz"
-      sha256 "9b23c520fe3904b9ee2e4d31a4649f9304e3d996795e25fb8def751d6f3c2713"
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1/f1-cli_Linux_x86_64.tar.gz"
+      sha256 "e18e2d9dd957c79cb5166cf89627b27770c8474869b3739f3e512a06c1a01716"
 
       def install
         bin.install "f1"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.5/f1-cli_Linux_arm64.tar.gz"
-      sha256 "bb7d1dcb95510e638a730c48d0ea59ec4e1f153cbc6250e397a2fb767c2de1d5"
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1/f1-cli_Linux_arm64.tar.gz"
+      sha256 "a4d625079b577afd27116931fa95b39ada703c43e1ef6fa36c3ed4ccb7f4478f"
 
       def install
         bin.install "f1"
