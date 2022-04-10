@@ -5,66 +5,66 @@
 class F1Cli < Formula
   desc "UDP Data Dumper for Formula 1 game"
   homepage "https://github.com/racing-telemetry"
-  version "0.0.1-rc.1"
+  version "0.0.1-rc.2"
   license "Apache"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.1/f1-cli_Darwin_x86_64.tar.gz"
-      sha256 "cdc5dd69596bcfc066f4a987be8a7c28823c4a57ee83e62eae8f87d28d257727"
+    if Hardware::CPU.arm?
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.2/f1-cli_Darwin_arm64.tar.gz"
+      sha256 "a781f392f6bcad1201620b18a78dce1c2a998841891b37a9814816921d7d313d"
 
       def install
-        bin.install "f1dump"
-        bash_completion.install "completions/f1dump.bash" => "f1dump"
-        zsh_completion.install "completions/f1dump.zsh" => "_f1dump"
-        fish_completion.install "completions/f1dump.fish"
+        bin.install "f1"
+        bash_completion.install "completions/f1.bash" => "f1"
+        zsh_completion.install "completions/f1.zsh" => "_f1"
+        fish_completion.install "completions/f1.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.1/f1-cli_Darwin_arm64.tar.gz"
-      sha256 "a802508d3226dcb35a87d891b3c11bd167f915b6bef7d20ce2a4cce489669139"
+    if Hardware::CPU.intel?
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.2/f1-cli_Darwin_x86_64.tar.gz"
+      sha256 "f8c6c0fdbc0e8ff7b7b9f31426abbe86dd8aa08e5587827316be374c81a4b360"
 
       def install
-        bin.install "f1dump"
-        bash_completion.install "completions/f1dump.bash" => "f1dump"
-        zsh_completion.install "completions/f1dump.zsh" => "_f1dump"
-        fish_completion.install "completions/f1dump.fish"
+        bin.install "f1"
+        bash_completion.install "completions/f1.bash" => "f1"
+        zsh_completion.install "completions/f1.zsh" => "_f1"
+        fish_completion.install "completions/f1.fish"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.1/f1-cli_Linux_arm64.tar.gz"
-      sha256 "959d1a705587f5e5043e623029f86efd1334775b1a8c1a2c3bd66851bced523a"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.2/f1-cli_Linux_armv7.tar.gz"
+      sha256 "2bd4d8a6edbe0cab60f4c4d285fd4865e722eb18fa637ebfa8f38c11ca24ed92"
 
       def install
-        bin.install "f1dump"
-        bash_completion.install "completions/f1dump.bash" => "f1dump"
-        zsh_completion.install "completions/f1dump.zsh" => "_f1dump"
-        fish_completion.install "completions/f1dump.fish"
+        bin.install "f1"
+        bash_completion.install "completions/f1.bash" => "f1"
+        zsh_completion.install "completions/f1.zsh" => "_f1"
+        fish_completion.install "completions/f1.fish"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.1/f1-cli_Linux_armv7.tar.gz"
-      sha256 "d8f8c8e027eeb860c701a4bcd9c48116f2e25bda66d9e599fd11bc1438e83f52"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.2/f1-cli_Linux_arm64.tar.gz"
+      sha256 "82b4a31147c593a93aa4c6c06d47a5859fbca5784bd3943c07da11311ce15a74"
 
       def install
-        bin.install "f1dump"
-        bash_completion.install "completions/f1dump.bash" => "f1dump"
-        zsh_completion.install "completions/f1dump.zsh" => "_f1dump"
-        fish_completion.install "completions/f1dump.fish"
+        bin.install "f1"
+        bash_completion.install "completions/f1.bash" => "f1"
+        zsh_completion.install "completions/f1.zsh" => "_f1"
+        fish_completion.install "completions/f1.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.1/f1-cli_Linux_x86_64.tar.gz"
-      sha256 "d2abde9c96a81c0f50ec7a6d726826bb78ac9ab0fc5c7f6f6bb21f8e1f13baca"
+      url "https://github.com/racing-telemetry/f1-cli/releases/download/v0.0.1-rc.2/f1-cli_Linux_x86_64.tar.gz"
+      sha256 "809bce9f838e312673a339b44accb944f0130b577429484538a02d87658e9d21"
 
       def install
-        bin.install "f1dump"
-        bash_completion.install "completions/f1dump.bash" => "f1dump"
-        zsh_completion.install "completions/f1dump.zsh" => "_f1dump"
-        fish_completion.install "completions/f1dump.fish"
+        bin.install "f1"
+        bash_completion.install "completions/f1.bash" => "f1"
+        zsh_completion.install "completions/f1.zsh" => "_f1"
+        fish_completion.install "completions/f1.fish"
       end
     end
   end
@@ -72,6 +72,6 @@ class F1Cli < Formula
   depends_on "go" => :optional
 
   test do
-    system "#{bin}/f1dump version"
+    system "#{bin}/f1 version"
   end
 end
